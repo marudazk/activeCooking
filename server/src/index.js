@@ -7,15 +7,30 @@ dotenv.config();
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+const allowedOrigins = (() => {
+  switch (process.env.NODE_ENV) {
+    case "development":
+      return ["http://localhost:3000"];
+    case "production":
+      return ['https://active-cooking.vercel.app/'];
+    default:
+      return [];
+  }
+})();
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("🚀 Backend działa!");
+  res.send("Witaj w Active Cooking API!");
 });
 
 app.get("/users", async (req, res) => {
-  const users = await prisma.User.findMany();
+  const users = await prisma.user.findMany();
   res.json(users);
 });
 
