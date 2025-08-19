@@ -1,0 +1,28 @@
+{
+    "name": "activecooking",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "ui",
+        "server",
+        "shared"
+    ],
+    "scripts": {
+        "postinstall": "npm --workspace shared run generate",
+        "build:shared": "npm --workspace shared run build",
+        "dev:ui": "npm run dev --workspace ui",
+        "dev:server": "npm --workspace server run dev",
+        "build:ui": "npm --workspace ui run build",
+        "build:server": "npm --workspace server run build",
+        "prisma:generate": "prisma generate",
+        "prisma:migrate": "prisma migrate dev",
+        "build": "npm run build:shared && npm run build:server && npm run build:ui"
+    },
+    "devDependencies": {
+        "prisma": "^6.13.0",
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.13.0"
+    }
+}

@@ -1,4 +1,4 @@
-import { Recipe } from "../../types";
+import { Recipe } from "shared/generated/prisma/client";
 
 const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
