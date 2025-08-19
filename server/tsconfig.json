@@ -8,9 +8,14 @@
     "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "baseUrl": "."
+    "baseUrl": ".",
+     "typeRoots": [
+      "../node_modules/@types",
+      "./node_modules/@types"
+    ]
   },
   "include": [
-    "src"
+    "src",
+    "../shared/generated/prisma"
   ]
 }
