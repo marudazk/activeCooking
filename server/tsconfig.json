@@ -9,13 +9,14 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "baseUrl": "..",
-     "typeRoots": [
+    "typeRoots": [
       "../node_modules/@types",
       "./node_modules/@types"
     ]
   },
   "include": [
     "src",
-    "../shared/generated/prisma"
+    "../shared/generated/prisma",
+    "../shared/dist"
   ]
 }
