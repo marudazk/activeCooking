@@ -8,6 +8,7 @@
         "shared"
     ],
     "scripts": {
+        "preinstall": "rm -rf node_modules",
         "postinstall": "npm --workspace shared run generate",
         "build:shared": "npm --workspace shared run build",
         "dev:ui": "npm run dev --workspace ui",
@@ -20,6 +21,10 @@
     },
     "devDependencies": {
         "prisma": "^6.13.0",
-        "typescript": "^5"
+        "typescript": "^5",
+        "@types/cors": "^2.8.19",
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.21",
+        "@types/node": "^24.3.0"
     }
 }
