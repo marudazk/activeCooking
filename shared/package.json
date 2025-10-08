@@ -5,7 +5,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "generate": "rm -rf generated/prisma && npx prisma generate --schema=../prisma/schema.prisma",
-    "build": "npm install & tsc -b",
+    "build": "npm install && tsc -b",
     "clean": "rm -rf dist generated/prisma"
   },  
   "devDependencies": {
