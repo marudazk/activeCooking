@@ -15,8 +15,7 @@
         "build:server": "npm --workspace server run build",
         "prisma:generate": "prisma generate",
         "prisma:migrate": "prisma migrate dev",
-        "build": "rm -rf node_modules package-lock.json && npm install --include=dev && npm --workspace shared run generate && npm run build:shared && npm run build:server && npm run build:ui"
-
+        "build": "rm -rf node_modules package-lock.json && npm install --include=dev && npm --workspace shared run generate && npm run build:shared && npm run build:server"
     },
     "dependencies": {
         "@prisma/client": "^6.14.0",

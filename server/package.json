@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "npm --prefix ../shared run build",
-    "build": "tsc",
+    "build": "tsc && echo '-> server/dist after tsc:' && ls -la dist || true",
     "dev": "ts-node src/index.ts",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
