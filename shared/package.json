@@ -5,10 +5,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "generate": "rm -rf generated/prisma && npx prisma generate --schema=../prisma/schema.prisma",
-    "build": "tsc -b",
+    "build": "npm install & tsc -b",
     "clean": "rm -rf dist generated/prisma"
   },  
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^5",
     "@types/node": "^24.3.0"
   }
