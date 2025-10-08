@@ -21,6 +21,7 @@
     "shared": "*"
   },
   "devDependencies": {
+    "typescript": "^5",
     "ts-node": "^10.9.2",
     "@types/cors": "^2.8.19",
     "@types/dotenv": "^8.2.0",

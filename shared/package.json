@@ -7,5 +7,9 @@
     "generate": "rm -rf generated/prisma && npx prisma generate --schema=../prisma/schema.prisma",
     "build": "tsc -b",
     "clean": "rm -rf dist generated/prisma"
+  },  
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^24.3.0"
   }
 }
