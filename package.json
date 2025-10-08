@@ -8,16 +8,15 @@
         "shared"
     ],
     "scripts": {
-        "preinstall": "rm -rf node_modules",
-        "postinstall": "npm --workspace shared run generate",
-        "build:shared": "npm --workspace shared run build",
+        "preinstall": "rm -rf node_modules package-lock.json ",
         "dev:ui": "npm run dev --workspace ui",
         "dev:server": "npm --workspace server run dev",
         "build:ui": "npm --workspace ui run build",
+        "build:shared": "npm --workspace shared run build",
         "build:server": "npm --workspace server run build",
         "prisma:generate": "prisma generate",
         "prisma:migrate": "prisma migrate dev",
-        "build": "rm -rf node_modules package-lock.json && npm install --include=dev && npm run build:shared && npm run build:server && npm run build:ui"
+        "build": "npm install --include=dev && npm --workspace shared run generate && npm run build:shared && npm run build:server && npm run build:ui"
 
     },
     "dependencies": {
