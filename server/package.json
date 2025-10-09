@@ -7,7 +7,7 @@
     "prebuild": "npm --prefix ../shared run build",
 "build": "tsc && echo '------ DIST ROOT -------' && pwd && echo '------ FULL DIST STRUCTURE -------' && find dist -maxdepth 3 -type f",
     "dev": "ts-node src/index.ts",
-    "start": "node ../../dist/server/index.js",
+    "start": "node dist/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
