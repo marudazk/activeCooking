@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "npm --prefix ../shared run build",
-    "build": "tsc",
+    "build": "tsc && echo '✅ Build finished! Dist folder located at:' && pwd && ls -la dist",
     "dev": "ts-node src/index.ts",
-    "start": "node server/dist/index.js",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
