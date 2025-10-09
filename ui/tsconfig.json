@@ -19,7 +19,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "plugins": [
       {
         "name": "next"
@@ -35,7 +37,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "../shared/generated/prisma",
+    "../shared/dist"
   ],
   "exclude": [
     "node_modules"
