@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "npm --prefix ../shared run build",
-"build": "tsc && echo '------ DIST ROOT -------' && pwd && echo '------ FULL DIST STRUCTURE -------' && find dist -maxdepth 3 -type f",
+    "build": "tsc",
     "dev": "ts-node src/index.ts",
     "start": "node dist/server/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
